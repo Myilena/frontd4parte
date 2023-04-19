@@ -3,6 +3,9 @@ import dotenv from "dotenv";
 import ejs from "ejs";
 import path from "path";
 import { fileURLToPath } from 'url';
+import home from "./routes/homepage.routes.js";
+
+// Inicializacion
 dotenv.config();
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -14,10 +17,7 @@ app.set("views",path.resolve(path.join(__dirname,"views")));
 
 //middleware
 app.use(express.static("./public"));
+app.use("/", home);
 
-app.get("/", (req, res)=>{
-    res.render("home");
-})
-app.listen(app.get("port"), ()=>{
-    console.log(`estas en pueto: ${app.get("port")}`);
-})
+
+export default app;
