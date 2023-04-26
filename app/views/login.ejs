@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include("./partials/head.ejs",{"title":"Login"}); %>
+    <link rel="stylesheet" href="./css/login.css">
     <body>
-        <h1><%= title %></h1>
+        <!-- <h1><%= title %></h1> -->
+        <form action="#" id="login-form">
+            <div class="heading">Login a eib</div>
+            <div class="left">
+              <label for="email">Correo</label> <br />
+              <input type="email" name="email" id="email" /> <br />
+              <label for="password">Clave</label> <br />
+              <input type="password" name="password" id="pass" /> <br />
+              <input type="submit" value="Login" />
+            </div>
+            <div class="right">
+              <div class="connect">Conectate con</div>
+              <a href="./auth/google" class="google-plus">
+          <!--       <span class="fontawesome-google-plus"></span> -->
+                <i class="fa fa-google" aria-hidden="true"></i>
+              </a>
+            </div>
+          </form>  
+
+
+
     </body>
 </html>
