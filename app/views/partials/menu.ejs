@@ -1,21 +1,20 @@
-<div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h5 class="text-white h4">Collapsed content</h5>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
-    </div>
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
+  <a href="index.html" class="navbar-brand ms-lg-5">
+      <h1 class="m-0 text-uppercase text-dark"><i class="bi bi-shop fs-1 text-primary me-3"></i>Pet Shop</h1>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto py-0">
+          <a href="/"         class="nav-item nav-link <%= activo==1 ? 'active' : '' %>">Home</a>
+          <a href="/servicio" class="nav-item nav-link <%= activo==2 ? 'active' : '' %>">Servicios</a>
+          <a href="/producto" class="nav-item nav-link <%= activo==3 ? 'active' : '' %>">Productos</a>
+          <a href="/acercade" class="nav-item nav-link <%= activo==4 ? 'active' : '' %>">Acerca de...</a>
+          <a href="/contacto" class="nav-item nav-link <%= activo==5 ? 'active' : '' %>">contacto</a>
+          <a href="/login" class="nav-item nav-link nav-contact bg-primary text-white px-5 ms-lg-5">login <i class="fa fa-users"></i></a>
+      </div>
   </div>
-  <nav class="navbar navbar-dark bg-dark">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div>
-      <a type="button" href="./" class="btn btn-warning">Home</a>
-      <a type="button" href="./servicio" class="btn btn-warning">Servicio</a>      
-      <a type="button" href="./contacto" class="btn btn-warning">Contacto</a>      
-      <a type="button" href="./blog" class="btn btn-warning">Blog</a>      
-      <a type="button" href="./galeria" class="btn btn-warning">Galeria</a>
-      <a type="button" href="./login" class="btn btn-warning"><i class="fas fa-user"></i></a>            
-    </div>
-    </div>
-  </nav>
+</nav>
+<!-- Navbar End -->

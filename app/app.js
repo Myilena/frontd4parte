@@ -5,6 +5,7 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import home from "./routes/homepage.routes.js";
 import loginRouter from "./routes/login.routes.js";
+import dash from "./routes/dashboard.routes.js";
 import passport from "passport";
 import "./middlewares/google.js";
 
@@ -24,6 +25,7 @@ app.use(passport.initialize());
 
 // rutas
 app.use("/", home);
+app.use("/v1", dash);
 app.use("/auth", passport.authenticate("auth-google", {
     scope: [
         "https://www.googleapis.com/auth/userinfo.profile",

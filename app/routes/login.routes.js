@@ -18,5 +18,4 @@ loginRouter.get("/google", (req, res)=>{
     res.send(token);
 });
 
-
-export default loginRouter ;
+export default loginRouter;
