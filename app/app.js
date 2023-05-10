@@ -7,6 +7,7 @@ import home from "./routes/homepage.routes.js";
 import loginRouter from "./routes/login.routes.js";
 import dash from "./routes/dashboard.routes.js";
 import passport from "passport";
+import cookieParser from "cookie-parser";
 import "./middlewares/google.js";
 
 // Inicializacion
@@ -22,6 +23,7 @@ app.set("views",path.resolve(path.join(__dirname,"views")));
 //middleware
 app.use(express.static("./public"));
 app.use(passport.initialize());
+app.use(cookieParser());
 
 // rutas
 app.use("/", home);
