@@ -17,7 +17,7 @@ passport.use(
                 cb(null, profile);
             } else {
                 //Save in data base//
-                emails.push(profile.emails[0].value);
+                email.push(profile.emails[0].value);
                 cb(null, profile);
             }
         }
