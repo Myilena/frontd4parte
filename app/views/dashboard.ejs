@@ -9,9 +9,16 @@
 
   <%- include("partials/dashmenu.ejs"); %>
   <!-- =============================================== -->
-
-  <%- include("partials/dashinicio.ejs"); %>
-
+  
+  <!-- ejeucutario el inicio -->
+  <% if ( mnu == 0 ) { %>
+    <%- include("partials/dashinicio.ejs"); %>
+  <% } %>
+  
+  <!-- Ejecutario el usuario -->
+  <% if ( mnu == 2 ) { %>
+    <%- include("partials/dashuser.ejs"); %>
+  <% } %>
   <!-- =============================================== -->
 
   <%- include("partials/dashfooter.ejs"); %>
