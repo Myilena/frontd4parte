@@ -9,6 +9,8 @@ import dash from "./routes/dashboard.routes.js";
 import passport from "passport";
 import cookieParser from "cookie-parser";
 import "./middlewares/google.js";
+import bodyParser from "body-parser";
+
 
 // Inicializacion
 dotenv.config();
@@ -24,6 +26,7 @@ app.set("views",path.resolve(path.join(__dirname,"views")));
 app.use(express.static("./public"));
 app.use(passport.initialize());
 app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // rutas
 app.use("/", home);
